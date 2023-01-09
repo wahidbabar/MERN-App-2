@@ -2,9 +2,9 @@
 
 cd server
 
-run node index.js
+node index.js
 
 
 cd client 
 
-run npm start
+npm start
