@@ -13,7 +13,7 @@ export const createUser = async (req, res) => {
       userName: name,
       location: {
         type: "Point",
-        coordinates: [latitude, longitude],
+        coordinates: [longitude, latitude],
       },
     });
 
@@ -36,7 +36,7 @@ export const findUsers = async (req, res) => {
         $geoNear: {
           near: {
             type: "Point",
-            coordinates: [Number(lat), Number(lng)],
+            coordinates: [Number(lng), Number(lat)],
           },
           distanceField: "distance",
           includeLocs: "location",
